@@ -1,0 +1,16 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\buttonclick.o
+./debug\special.o
+./debug\horizontalline.o
+./debug\newgame.o
+./debug\basic.o
+./debug\verticalline.o
+./debug\bomb.o
+./debug\star.o
+./debug\qrc_pics.o
+./debug\moc_mainwindow.o
+./debug\moc_buttonclick.o
+./debug\moc_newgame.o
+);

@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\buttonclick.o
+./release\special.o
+./release\horizontalline.o
+./release\newgame.o
+./release\basic.o
+./release\verticalline.o
+./release\bomb.o
+./release\star.o
+./release\qrc_pics.o
+./release\moc_mainwindow.o
+./release\moc_buttonclick.o
+./release\moc_newgame.o
+);

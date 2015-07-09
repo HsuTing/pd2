@@ -1,0 +1,44 @@
+Data:
+
+	用來存取每一個未知0的位置的可能答案。
+	position_i, position_j:
+		記錄位置
+	check_number:
+		記錄這位置直行、橫列、區塊的各種數字數量
+
+Sudoku:
+
+	GiveQuestion:
+
+		包含兩個個function:
+		GenerateBlock:
+			在空白的map上面填入四個-1的區塊
+		GenerateNumber:
+			在剩下位置，依照sudoku的規則填入數字。
+			先用亂數填出一個3 * 3的矩陣，在使用平移的方式，
+			將剩下的矩陣填完。
+			包含兩個function:
+				SearchI, SearchJ:
+					在特定區域裡面，依照特定規則去找該填的位置
+		最後回到GiveQuestion裡面，將填好的Sudoku挖掉30個空格
+
+	ReadIn:
+
+		直接使用cin將Sudoku讀入。
+
+	Solve:
+
+		包含4個function:
+		SolveFunction:
+			從CheckNumber得知有多少個未知數，並設立同樣數量個的Data陣列，
+			在將每個未知數的可能性藉由Data的function去存取，
+			最後先將可能性只為1的數字先填入，並在重複上述動作，
+			一直到剩下未知數的可能性不為1，在來如果還有未知數的話，
+			先將目前陣列存到temp_map裡面，並在呼叫一次SolveFunction；
+			若有解的話，則先將solvable存為true，並將結果存到temp.txt裡面。
+		CheckNumber:
+			掃過整著Sudoku，統計各種數字有多少個
+		CheckZero:
+			掃過整個Sudoku確定是否還有未知數
+		Check:
+			掃過整個Sudoku確定是否有不符合Sudoku規則的情況
